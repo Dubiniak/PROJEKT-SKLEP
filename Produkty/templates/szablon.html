@@ -1,10 +1,15 @@
-
-    <h1> GITAROMANIA </h1>
-
-    <h3> Zakup potrzebny sprzęt </h3>
-
-    {% for kat in kategorie %}
-
-    <p><a href = "kategoria/ {{ kat.id }}"> {{kat.nazwa}} </a> </p>
-
-    {% endfor %}
+    <div>
+    <h1> SKLEP MUZYCZNY-KLEJNUTY</h1>KOSZYK
+        <h2>----------------------------------------------------------------------------------------------------------------------------------------------------------</h2>
+    </div>
+    <div style="clear:both"></div>
+    <div style="width:220px; float:left">
+    <h3> Kategorie produktów: </h3>
+        {% for kat in kategorie %}
+             <p><a href = "/kategoria/{{ kat.id }}"> {{kat.nazwa}} </a> </p>
+        {% endfor %}
+    </div>
+    <div style="width:700; float:left">
+        {% block produkt %}     {% endblock produkt %}
+    </div>
+    <div style="clear:both"></div>
