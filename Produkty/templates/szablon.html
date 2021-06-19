@@ -1,0 +1,10 @@
+
+    <h1> GITAROMANIA </h1>
+
+    <h3> Zakup potrzebny sprzęt </h3>
+
+    {% for kat in kategorie %}
+
+    <p><a href = "kategoria/ {{ kat.id }}"> {{kat.nazwa}} </a> </p>
+
+    {% endfor %}
